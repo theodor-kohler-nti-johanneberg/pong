@@ -43,7 +43,9 @@ function draw() {
     let canvas = document.getElementById("canvas");
     let racket1 = canvas.getContext("2d");
     racket1.beginPath();
-    racket1.rect(0.05 * width, racket1Y, 0.1 * width, 0.6 * height)
+    //racket1.rect(0.05 * width, racket1Y, 0.1 * width, 0.6 * height);
+    racket1.rect(20,20, 200, 200);
+    racket1.stroke;
 }
 
 function app() {
@@ -67,6 +69,9 @@ function app() {
     draw();
 }
 
+/*
 while (true) {
     setTimeout(app(), 100)
 }
+*/
+app();
