@@ -39,7 +39,7 @@ function checkWinner(x) {
 }
 
 function newVelocities(ball) {
-    if (ball.x <= 0.03 * width && ball.y >= racket1Y && ball.y <= racket1Y + racketLength || ball.x >= width - (0.03 * width + ballLength) && ball.y >= racket2Y && ball.y <= racket2Y + racketLength || ball.y == height || ball.y == 0) {
+    if ((ball.x <= 0.03 * width && ball.y >= racket1Y && ball.y <= racket1Y + racketLength) || (ball.x >= width - (0.03 * width + ballLength) && ball.y >= racket2Y && ball.y <= racket2Y + racketLength) || ball.y == height || ball.y == 0) {
         ball.velocityX = -ball.velocityX;
         ball.velocityY = -ball.velocityY;
 
@@ -58,11 +58,12 @@ function draw() {
     racket1.clearRect(0, 0, width, height);
 
     racket1.beginPath();
-    racket1.rect(0.02 * width, racket1Y + 0.2 * height, 0.01 * width, 0.2 * height);
+    racket1.fillStyle = "black"
+    racket1.rect(0.02 * width, racket1Y + 0.2 * height, 5, 100);//racket1.rect(0.02 * width, racket1Y + 0.2 * height, 0.01 * width, 0.2 * height);
     racket1.fill();
 
     racket2.beginPath();
-    racket2.rect(width - (0.03 * width), racket2Y + 0.2 * height, 0.01 * width, 0.2 * height);
+    racket2.rect(width - (0.025 * width), racket2Y + 0.2 * height, 5, 100);//racket2.rect(width - (0.03 * width), racket2Y + 0.2 * height, 0.01 * width, 0.2 * height);
     racket2.fill();
 
     ballRender.beginPath();
