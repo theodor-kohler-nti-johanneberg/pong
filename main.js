@@ -1,6 +1,7 @@
 /*UPPLÖSNING 1366x768*/
 /*margin(38,35px) racket(38,35px) margin(613,6px) racket(38,35px) margin(38,35px)*/
 /*Ball = 7,67px*7,67px */
+//TEST
 
 const FRAME_TIME = 1.0 / 60.0;
 
